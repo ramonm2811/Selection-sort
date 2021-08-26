@@ -12,6 +12,7 @@ btnOrdenar.addEventListener("click", ordenarCartas);
 //----------------------------------------------------------------
 function crearCartas() {
   //Limpiando el HTML donde van las cartas
+  guardarDatos = [];
   document.getElementById("row1").innerHTML = "";
   //variables
   let cantidadDeCartas = document.getElementById("cantidadDeCartas").value;
@@ -67,6 +68,7 @@ function crearCartas() {
 //--------------------Función ordenar cartas------------------------
 //----------------------------------------------------------------
 function ordenarCartas() {
+  document.getElementById("row2").innerHTML = "";
   //Transformar de A=1, J=11, Q=12,K=13
   guardarDatos.forEach(function (item) {
     if (item.numero == "A") {
